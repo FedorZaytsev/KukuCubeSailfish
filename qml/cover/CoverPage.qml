@@ -44,8 +44,8 @@ CoverBackground {
             iconSource: "image://theme/icon-cover-next"
             onTriggered: {
                 app.activate()
-                if (app.pageStack.currentPage.restart) {
-                    app.pageStack.currentPage.restart()
+                if (app.pageStack.currentPage.start) {
+                    app.pageStack.currentPage.start("arcade")
                 }
             }
         }

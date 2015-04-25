@@ -14,17 +14,25 @@ TARGET = harbour-cude
 
 CONFIG += sailfishapp
 
-SOURCES += src/harbour-cude.cpp
+SOURCES += src/harbour-cude.cpp \
+    src/cstorage.cpp
 
 OTHER_FILES += qml/harbour-cude.qml \
     qml/cover/CoverPage.qml \
-    qml/pages/FirstPage.qml \
     rpm/harbour-cude.changes.in \
     rpm/harbour-cude.spec \
     rpm/harbour-cude.yaml \
     translations/*.ts \
     harbour-cude.desktop \
-    qml/pages/main.js
+    qml/pages/main.js \
+    qml/pages/Cell.qml \
+    qml/pages/PauseMenu.qml \
+    qml/pages/CustomTimer.qml \
+    qml/pages/FirstPage.qml \
+    qml/pages/StartComponent.qml \
+    qml/pages/GameField.qml \
+    qml/pages/RestartComponent.qml \
+    qml/pages/PauseComponent.qml
 
 # to disable building translations every time, comment out the
 # following CONFIG line
@@ -35,4 +43,7 @@ CONFIG += sailfishapp_i18n
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/harbour-cude-de.ts
+
+HEADERS += \
+    src/cstorage.h
 
